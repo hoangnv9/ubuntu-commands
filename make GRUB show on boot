@@ -1,0 +1,16 @@
+# How to make GRUB always appear for Ubuntu
+
+sudo vi /etc/default/grub  
+ 
+Then when gedit loads, comment out (place a # in front) the following line:
+ 
+GRUB_HIDDEN_TIMEOUT=0  
+ 
+Also set the following to a lower value if you want (3~5 seconds is reasonable):
+ 
+GRUB_TIMEOUT=10  
+ 
+Then save the file and in the Terminal issue the following command:
+ 
+sudo update-grub  
+ 
